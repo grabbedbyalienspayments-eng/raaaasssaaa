@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLACK STUDIO - Management Premium pentru Modele | Studio Boutique</title>
+    <meta name="description" content="BLACK STUDIO este un studio boutique de management pentru modele care vor să înceapă inteligent în zona de content premium. Oferim training, strategie personalizată și suport constant pentru creștere sustenabilă în siguranță și cu încredere." />
+    <meta name="keywords" content="management modele, content premium, studio boutique, training modele, strategie personalizată" />
+    <link rel="canonical" href="https://blackstudio.ro/" />
+    <meta name="last-modified" content="2025-01-01" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BLACK STUDIO - Management Premium pentru Modele" />
+    <meta property="og:description" content="Studio boutique de management pentru modele care vor să înceapă inteligent în zona de content premium." />
+    <meta property="og:url" content="https://blackstudio.ro/" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BLACK STUDIO - Management Premium pentru Modele" />
+    <meta name="twitter:description" content="Studio boutique de management pentru modele care vor să înceapă inteligent în zona de content premium." />
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-display: 'Playfair Display', Georgia, serif;
+        --font-sans: 'DM Sans', system-ui, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .font-serif { font-family: var(--font-serif) !important; }
+      .font-display { font-family: var(--font-display) !important; }
+      .font-sans-custom { font-family: var(--font-sans) !important; }
+
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.reveal-left {
+        transform: translateX(-50px);
+      }
+      .reveal.reveal-right {
+        transform: translateX(50px);
+      }
+      .reveal.reveal-scale {
+        transform: scale(0.94);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+      }
+      .reveal-delay-1 { transition-delay: 0.1s; }
+      .reveal-delay-2 { transition-delay: 0.22s; }
+      .reveal-delay-3 { transition-delay: 0.36s; }
+      .reveal-delay-4 { transition-delay: 0.5s; }
+
+      /* Parallax */
+      .parallax-img {
+        will-change: transform;
+        transition: transform 0.1s linear;
+      }
+
+      /* Line draw */
+      .line-draw {
+        width: 0;
+        transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .line-draw.visible { width: 100%; }
+
+      /* Hover image zoom */
+      .img-zoom-wrap { overflow: hidden; }
+      .img-zoom-wrap img {
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .img-zoom-wrap:hover img { transform: scale(1.04); }
+
+      /* Cursor line on hover */
+      .underline-hover {
+        position: relative;
+        display: inline-block;
+      }
+      .underline-hover::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: currentColor;
+        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .underline-hover:hover::after { width: 100%; }
+
+      /* Number stroke */
+      .stroke-number {
+        -webkit-text-stroke: 1px rgba(0,0,0,0.15);
+        color: transparent;
+        font-family: var(--font-serif);
+      }
+
+      /* Marquee */
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .marquee-track {
+        animation: marquee 22s linear infinite;
+        white-space: nowrap;
+        display: flex;
+      }
+
+      /* Grain overlay */
+      .grain::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.06;
+      }
+
+      /* Smooth scroll */
+      html { scroll-behavior: smooth; }
+
+      /* Selection */
+      ::selection { background: #000; color: #fff; }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "BLACK STUDIO",
+      "description": "Studio boutique de management pentru modele care vor să înceapă inteligent în zona de content premium",
+      "url": "https://blackstudio.ro/",
+      "telephone": "+40775134887",
+      "email": "andreibojici@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
